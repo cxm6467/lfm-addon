@@ -10,18 +10,22 @@
       <Anchor point="CENTER"/>
     </Anchors>
     <Frames>
-      <!-- Close Button (inherits from UIPanelCloseButton) -->
+      <!-- Close Button -->
       <Button name="$parentCloseButton" inherits="UIPanelCloseButton">
         <Anchors>
           <Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT" x="-5" y="-5"/>
         </Anchors>
       </Button>
       <!-- Title Bar -->
-      <FontString name="$parentTitle" inherits="GameFontHighlight" text="LFM">
-        <Anchors>
-          <Anchor point="TOP" relativeTo="$parent" relativePoint="TOP" x="0" y="-12"/>
-        </Anchors>
-      </FontString>
+      <Layers>
+        <Layer level="OVERLAY">
+          <FontString name="$parentTitleText" inherits="GameFontNormalLarge" text="LFM">
+            <Anchors>
+              <Anchor point="TOP" relativeTo="$parent" relativePoint="TOP" x="0" y="-12"/>
+            </Anchors>
+          </FontString>
+        </Layer>
+      </Layers>
       <!-- Dungeon Dropdown -->
       <Frame name="$parentDungeonDropdown" inherits="UIDropDownMenuTemplate">
         <Size>
@@ -36,11 +40,15 @@
           </OnLoad>
         </Scripts>
       </Frame>
-      <FontString name="$parentDungeonLabel" inherits="GameFontNormalSmall" text="Dungeon">
-        <Anchors>
-          <Anchor point="LEFT" relativeTo="$parentDungeonDropdown" relativePoint="RIGHT" x="10" y="0"/>
-        </Anchors>
-      </FontString>
+      <Layers>
+        <Layer level="OVERLAY">
+          <FontString name="$parentDungeonLabel" inherits="GameFontNormalSmall" text="Dungeon">
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="$parentDungeonDropdown" relativePoint="RIGHT" x="10" y="0"/>
+            </Anchors>
+          </FontString>
+        </Layer>
+      </Layers>
       <!-- Difficulty Dropdown -->
       <Frame name="$parentDifficultyDropdown" inherits="UIDropDownMenuTemplate">
         <Size>
@@ -55,11 +63,15 @@
           </OnLoad>
         </Scripts>
       </Frame>
-      <FontString name="$parentDifficultyLabel" inherits="GameFontNormalSmall" text="Difficulty">
-        <Anchors>
-          <Anchor point="LEFT" relativeTo="$parentDifficultyDropdown" relativePoint="RIGHT" x="10" y="0"/>
-        </Anchors>
-      </FontString>
+      <Layers>
+        <Layer level="OVERLAY">
+          <FontString name="$parentDifficultyLabel" inherits="GameFontNormalSmall" text="Difficulty">
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="$parentDifficultyDropdown" relativePoint="RIGHT" x="10" y="0"/>
+            </Anchors>
+          </FontString>
+        </Layer>
+      </Layers>
       <!-- Role Dropdown -->
       <Frame name="$parentRoleDropdown" inherits="UIDropDownMenuTemplate">
         <Size>
@@ -74,11 +86,15 @@
           </OnLoad>
         </Scripts>
       </Frame>
-      <FontString name="$parentRoleLabel" inherits="GameFontNormalSmall" text="Role">
-        <Anchors>
-          <Anchor point="LEFT" relativeTo="$parentRoleDropdown" relativePoint="RIGHT" x="10" y="0"/>
-        </Anchors>
-      </FontString>
+      <Layers>
+        <Layer level="OVERLAY">
+          <FontString name="$parentRoleLabel" inherits="GameFontNormalSmall" text="Role">
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="$parentRoleDropdown" relativePoint="RIGHT" x="10" y="0"/>
+            </Anchors>
+          </FontString>
+        </Layer>
+      </Layers>
       <!-- Level Dropdown -->
       <Frame name="$parentLevelDropdown" inherits="UIDropDownMenuTemplate">
         <Size>
@@ -93,11 +109,15 @@
           </OnLoad>
         </Scripts>
       </Frame>
-      <FontString name="$parentLevelLabel" inherits="GameFontNormalSmall" text="Level">
-        <Anchors>
-          <Anchor point="LEFT" relativeTo="$parentLevelDropdown" relativePoint="RIGHT" x="10" y="0"/>
-        </Anchors>
-      </FontString>
+      <Layers>
+        <Layer level="OVERLAY">
+          <FontString name="$parentLevelLabel" inherits="GameFontNormalSmall" text="Level">
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="$parentLevelDropdown" relativePoint="RIGHT" x="10" y="0"/>
+            </Anchors>
+          </FontString>
+        </Layer>
+      </Layers>
       <!-- Generate Button -->
       <Button name="$parentGenerateButton" inherits="UIPanelButtonTemplate" text="Generate">
         <Size>

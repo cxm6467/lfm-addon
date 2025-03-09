@@ -24,7 +24,7 @@ for i = 0, 20 do
   end
 end
 
--- Variables to store user selections.
+-- Variables to store selections.
 lfm_SelectedDungeon = nil;
 lfm_SelectedDifficulty = nil;
 lfm_SelectedRole = nil;
@@ -79,7 +79,7 @@ end
 function lfm_DifficultyDropdown_OnLoad(self)
   UIDropDownMenu_SetWidth(self, 120);
   UIDropDownMenu_SetText(self, "Select Difficulty");
-  -- This dropdown is reinitialized when a dungeon is selected.
+  -- Dropdown reinitialized when a dungeon is selected.
 end
 
 ------------------------------------------------------------
